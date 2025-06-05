@@ -27,7 +27,7 @@ public class Tourwit_Auth {
 
             driver.manage().window().maximize();
             
-//Scenario 1 -- Log In -- Log In with valid credential
+//Scenario 1 -- Log In -- Log In with valid credentials
             
          /* WebElement loginButton = driver.findElement(By.xpath("//button[normalize-space(text())='Login']"));
             loginButton.click();
