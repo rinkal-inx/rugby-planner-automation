@@ -215,7 +215,7 @@ public class Tourwit_Auth {
             if (driver.getPageSource().contains("Verification email")) {
             System.out.println("Account created successfully.");
             } else {
-            	System.out.println("Issue with Account creation.");}   
+             System.out.println("Issue with Account creation.");}   
         }*/
             
 //Scenario 6A Sign up using manual xpath without using selectorshub
