@@ -54,7 +54,7 @@ public class Tourwit_Auth {
  //Scenario 2 -- Log In --- Log In with blank password followed by invalid password.
 
    /*   WebElement loginButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(text())='Login']")));
-        loginButton1.click();
+        loginButton1.click(); 
 
         Thread.sleep(2000); 
 
