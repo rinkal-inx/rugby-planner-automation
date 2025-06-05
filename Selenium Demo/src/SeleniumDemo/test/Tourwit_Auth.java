@@ -220,7 +220,7 @@ public class Tourwit_Auth {
             
 //Scenario 6A Sign up using manual xpath without using selectorshub
             
-         /* WebElement signUpButton = driver.findElement(By.xpath("//button[text()='Sign up']"));
+         /*  WebElement signUpButton = driver.findElement(By.xpath("//button[text()='Sign up']"));
             signUpButton.click();
             
             WebElement firstnameField = driver.findElement(By.xpath("//input[@id='firstName']"));
