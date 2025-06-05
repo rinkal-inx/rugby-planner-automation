@@ -51,7 +51,7 @@ public class Tourwit_Auth {
                 System.out.println("❌ Login Test Failed: Login was not successful.");
             }*/
         
- //Scenario 2 -- Log In -- Log In with blank password followed by invalid password.
+ //Scenario 2 -- Log In --- Log In with blank password followed by invalid password.
 
    /*   WebElement loginButton1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(text())='Login']")));
         loginButton1.click();
