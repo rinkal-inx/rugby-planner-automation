@@ -30,7 +30,7 @@ public class AIWeb {
             driver.get("https://dev.d22be1jj19bmim.amplifyapp.com/");
             driver.manage().window().maximize();
 
-// Scenario 1 -- Create Account with valid credential
+// Scenario 1 -- Create Account with valid credential  (BUG 10)
             /*WebElement createAcc = driver.findElement(By.xpath("(//button[normalize-space()='Create Account'])[1]"));
             createAcc.click();
             
@@ -369,7 +369,68 @@ public class AIWeb {
                     By.xpath("//div[contains(@class,'modalContent_btn-container')]//span[normalize-space()='Logout']")));
             modalLogout3.click(); */
             
+//Scenario 5 - Reset Password  (BUG 12)
             
+            WebElement forgetPassword = driver.findElement(By.xpath("//button[normalize-space()='Forgot your password?']"));
+            forgetPassword.click();
+            
+            WebElement emailField = driver.findElement(By.xpath("//input[@id='amplify-id-:r8:']"));
+            emailField.sendKeys("webdoctor@yopmail.com");
+            
+            WebElement sendButton = driver.findElement(By.xpath("//button[normalize-space()='Send code']"));
+            sendButton.click();
+            
+            Thread.sleep(8000);
+            
+            driver.get("https://yopmail.com/");
+            
+            WebElement inboxInput = driver.findElement(By.id("login"));
+            inboxInput.sendKeys("webdoctor", Keys.ENTER);
+            
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ifinbox"));
+
+            WebElement firstEmail = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.m")));
+            firstEmail.click();
+            
+            driver.switchTo().defaultContent();
+            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("ifmail"));
+            
+            Thread.sleep(20000);
+            
+            String mailBody = driver.findElement(By.tagName("body")).getText();
+            
+            String code1 = "";
+            Matcher matcher = Pattern.compile("\\b\\d{6}\\b").matcher(mailBody);
+            matcher.find();
+            code1 = matcher.group();
+            
+            driver.switchTo().defaultContent();
+            driver.navigate().back();
+            driver.navigate().back();
+            
+            WebElement codeInput1 = driver.findElement(By.xpath("//input[@id='amplify-id-:rb:']"));
+            codeInput1.sendKeys(code1); 
+            
+            WebElement newPassword = driver.findElement(By.xpath("//input[@id='amplify-id-:re:']"));
+            newPassword.sendKeys("Test@123");
+            
+            WebElement confirmPassword = driver.findElement(By.xpath("//input[@id='amplify-id-:rh:']"));
+            confirmPassword.sendKeys("Test@123");
+            
+            WebElement submitButton = driver.findElement(By.xpath("//button[normalize-space()='Submit']"));
+            submitButton.click();
+
+            WebElement toast = wait.until(ExpectedConditions.presenceOfElementLocated(
+                    By.xpath("//*[contains(text(),'password has been reset successfully.')]")
+                ));
+            
+                String toastMessage = toast.getText().toLowerCase().trim();
+
+                if (toastMessage.contains("password has been reset successfully.")) {
+                    System.out.println("✅ Sign Up Test Passed: Toast detected with text = " + toastMessage);
+                } else {
+                    System.out.println("❌ Sign Up Test Failed: Toast appeared, but text did not match expected. Actual = " + toastMessage);
+                }
             
         } catch (Exception e) {
             System.out.println("❌ Test Failed: " + e.getMessage());
