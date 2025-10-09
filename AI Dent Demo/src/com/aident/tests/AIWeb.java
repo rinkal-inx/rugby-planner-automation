@@ -495,6 +495,9 @@ public class AIWeb {
                 System.out.println("BUG#38_⚠️ Page title mismatch. Found: " + actualTitle);
             }*/
             
+//Scenario 9 - WEB PAGE TITLE  (BUG 38)            
+           
+            
             
             
         } catch (Exception e) {
