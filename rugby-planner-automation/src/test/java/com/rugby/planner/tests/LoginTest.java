@@ -13,7 +13,6 @@ public class LoginTest extends BaseTest {
     public void verifyValidLogin() {
         System.out.println("🚀 Starting Login Test...");
 
-        
         LoginPage loginPage = new LoginPage(driver);
         String email = ConfigReader.getProperty("username");
         String password = ConfigReader.getProperty("password");
