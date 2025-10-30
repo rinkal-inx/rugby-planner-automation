@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.rugby.planner.tests.LoginTest">
+      <class name="com.rugby.planner.tests.TeamManagementTest">
         <methods>
           <include name="tearDown"/>
-          <include name="loginWithEmptyFields"/>
           <include name="setUp"/>
+          <include name="createTeamAndVerify"/>
         </methods>
-      </class> <!-- com.rugby.planner.tests.LoginTest -->
+      </class> <!-- com.rugby.planner.tests.TeamManagementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
