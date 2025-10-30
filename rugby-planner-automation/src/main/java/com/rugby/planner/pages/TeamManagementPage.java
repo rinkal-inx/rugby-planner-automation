@@ -79,7 +79,7 @@ public class TeamManagementPage {
             WaitUtils.waitForElementVisible(driver, teamRow, 10);
             return driver.findElement(teamRow).isDisplayed();
         } catch (Exception e) {
-            return false;
+            return false; 
         }
     }
 }
