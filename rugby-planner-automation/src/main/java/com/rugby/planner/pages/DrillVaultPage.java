@@ -9,7 +9,7 @@ public class DrillVaultPage {
 
     WebDriver driver;
 
-    // --- LOCATORS ---
+    // --- LOCATORS ---  
     private By menuDrillVault = By.xpath("//li[@class='relative active']//a[1]");
     private By addDrillButton = By.xpath("//button[normalize-space()='Add Drill']");
     private By drillNameField = By.xpath("//input[@placeholder='Enter drill name']");
