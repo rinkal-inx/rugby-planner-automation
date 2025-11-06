@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.rugby.planner.tests.PlannerTest">
+      <class name="com.rugby.planner.tests.ShareCoachTest">
         <methods>
           <include name="tearDown"/>
+          <include name="verifyCoachSharingFlow"/>
           <include name="setUp"/>
-          <include name="verifyPlannerFlow"/>
         </methods>
-      </class> <!-- com.rugby.planner.tests.PlannerTest -->
+      </class> <!-- com.rugby.planner.tests.ShareCoachTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
