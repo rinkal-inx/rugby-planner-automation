@@ -41,7 +41,6 @@ public class TestCraft {
 		WebElement teamName = driver.findElement(By.cssSelector("h2.text-gray-900"));
 		teamName.click();
 		
-		
 
 	}
 
