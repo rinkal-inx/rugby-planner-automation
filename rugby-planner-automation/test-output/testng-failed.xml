@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.rugby.planner.tests.ShareCoachTest">
+      <class name="com.rugby.planner.tests.LogoutTest">
         <methods>
           <include name="tearDown"/>
           <include name="verifyCoachSharingFlow"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.rugby.planner.tests.ShareCoachTest -->
+      </class> <!-- com.rugby.planner.tests.LogoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
