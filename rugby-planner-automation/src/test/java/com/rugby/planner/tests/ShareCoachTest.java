@@ -39,7 +39,7 @@ public class ShareCoachTest extends BaseTest {
 
         Assert.assertFalse(rows.isEmpty());
 
-        for (WebElement row : rows) {
+        for (WebElement row : rows) { 
             String name3 = ShareCoach.getName(row);
             String email3 = ShareCoach.getEmail(row);
             String inviteDate = ShareCoach.getInviteDate(row);
