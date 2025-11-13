@@ -1,5 +1,6 @@
 package com.rugby.planner.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.rugby.planner.base.BaseTest;
 import com.rugby.planner.config.ConfigReader;
@@ -9,8 +10,8 @@ import com.rugby.planner.pages.LogoutPage;
 public class LogoutTest extends BaseTest {
 	
 	 @Test(priority = 1)
-	    public void verifyCoachSharingFlow() throws InterruptedException {
-	       
+	  public void verifyCoachSharingFlow() throws InterruptedException {
+	  try { 
 	    LoginPage loginPage = new LoginPage(driver);
 	    loginPage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
 	    Thread.sleep(3000);
@@ -31,6 +32,10 @@ public class LogoutTest extends BaseTest {
 	    
 	    logoutpage.displaySigninPage();
 	    System.out.println("Signin page appeared");
-	    
-	 }
+	  }catch(Exception e) {
+		  System.out.println("Logout test failed" + e.getMessage());
+		  captureScreenshot("verifyLogoutFunctionality");
+		  Assert.fail("Exception during logout test"+e.getMessage());
+	  }			 
+   }
 }

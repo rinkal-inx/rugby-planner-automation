@@ -13,7 +13,7 @@ public class LogoutPage {
     private final By logoutButton = By.xpath("//a[normalize-space()='Log Out']");
     private final By confirmationModal = By.id("popup-logout");
     private final By confirmLogoutButton = By.xpath("//a[@data-modal-hide='popup-logout']");
-    private final By signinButton = By.xpath("//button[normalize-space()='Sign in']"); // verify redirect to login
+    private final By signinButton = By.xpath("//button[normalize-space()='Sign in']");
 
     public LogoutPage(WebDriver driver) {
         this.driver = driver;
@@ -36,7 +36,7 @@ public class LogoutPage {
     
     public void clickConfirmbutton() {
     	WaitUtils.waitForElementClickable(driver, confirmLogoutButton, 10);
-    	driver.findElement(confirmLogoutButton).click();
+    	driver.findElement(logoutButton).click();
     }
     
     public void displaySigninPage() {

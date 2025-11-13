@@ -1,21 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-12T11:53:13 IST" name="Default suite" finished-at="2025-11-12T11:53:49 IST" duration-ms="36723">
+  <suite started-at="2025-11-13T18:31:00 IST" name="Default suite" finished-at="2025-11-13T18:31:30 IST" duration-ms="29966">
     <groups>
     </groups>
-    <test started-at="2025-11-12T11:53:13 IST" name="Default test" finished-at="2025-11-12T11:53:49 IST" duration-ms="36723">
+    <test started-at="2025-11-13T18:31:00 IST" name="Default test" finished-at="2025-11-13T18:31:30 IST" duration-ms="29966">
       <class name="com.rugby.planner.tests.LogoutTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-12T11:53:13 IST" name="setUp" finished-at="2025-11-12T11:53:30 IST" duration-ms="17511" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-13T18:31:00 IST" name="setUp" finished-at="2025-11-13T18:31:17 IST" duration-ms="17524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCoachSharingFlow()[pri:1, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-12T11:53:30 IST" name="verifyCoachSharingFlow" finished-at="2025-11-12T11:53:47 IST" duration-ms="16630" status="PASS">
+        <test-method signature="verifyCoachSharingFlow()[pri:1, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-13T18:31:18 IST" name="verifyCoachSharingFlow" finished-at="2025-11-13T18:31:29 IST" duration-ms="11795" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Exception during logout testelement not interactable
+  (Session info: chrome=142.0.7444.162)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.4', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc1c57abcf1aa42d2b01797ded7cc73c, clickElement {id=f.1AFA11E9F57CDD15D1B3E8BE06383926.d.9E04428675867692DE6829D7AC46AEE5.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.162, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: /var/folders/wl/dv8t8mz11ss...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62918}, goog:processID: 8083, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62918/devtoo..., se:cdpVersion: 142.0.7444.162, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (dc1c57abcf1aa42d2b01797ded7cc73c)] -> xpath: //a[normalize-space()='Log Out']]
+Session ID: dc1c57abcf1aa42d2b01797ded7cc73c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Exception during logout testelement not interactable
+  (Session info: chrome=142.0.7444.162)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.4', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dc1c57abcf1aa42d2b01797ded7cc73c, clickElement {id=f.1AFA11E9F57CDD15D1B3E8BE06383926.d.9E04428675867692DE6829D7AC46AEE5.e.72}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.162, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: /var/folders/wl/dv8t8mz11ss...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62918}, goog:processID: 8083, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:62918/devtoo..., se:cdpVersion: 142.0.7444.162, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (dc1c57abcf1aa42d2b01797ded7cc73c)] -> xpath: //a[normalize-space()='Log Out']]
+Session ID: dc1c57abcf1aa42d2b01797ded7cc73c
+at org.testng.Assert.fail(Assert.java:111)
+at com.rugby.planner.tests.LogoutTest.verifyCoachSharingFlow(LogoutTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCoachSharingFlow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-12T11:53:47 IST" name="tearDown" finished-at="2025-11-12T11:53:49 IST" duration-ms="2489" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.rugby.planner.tests.LogoutTest@31190526]" started-at="2025-11-13T18:31:29 IST" name="tearDown" finished-at="2025-11-13T18:31:30 IST" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
